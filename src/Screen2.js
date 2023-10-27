@@ -83,6 +83,7 @@ const Screen2 = ({ navigation, route }) => {
                         </View>
                     </Pressable>
                 )}
+                keyExtractor={(item) => item.id}
             />
         </View>
     )

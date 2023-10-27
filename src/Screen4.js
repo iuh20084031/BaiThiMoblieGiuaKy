@@ -1,7 +1,27 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
+import React, { useEffect } from 'react'
 
-const Screen4 = () => {
+const Screen4 = ({navigation, route}) => {
+  useEffect(() => {
+    navigation.setOptions({
+      title: '',
+      headerRight: () => (
+        <View>
+          <Pressable
+
+          >
+            <Image
+              source={require('../Data/ic_outline-search.png')}
+              style={{
+                width: 25,
+                height: 25
+              }}
+            />
+          </Pressable>
+        </View>
+      )
+    })
+  }, [navigation])
   return (
     <View>
       <Text>Screen4</Text>
